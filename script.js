@@ -18,28 +18,28 @@ function playGame(playerMove) {
   const computerMove = pickComputerMove();
   let result = "";
 
-  if (playerMove === "Scissors") {
-    if (computerMove === "Rock") {
+  if (playerMove === "cissors") {
+    if (computerMove === "rock") {
       result = "You lose.";
-    } else if (computerMove === "Paper") {
+    } else if (computerMove === "paper") {
       result = "You Win.";
-    } else if (computerMove === "Scissors") {
+    } else if (computerMove === "scissors") {
       result = "Tie.";
     }
-  } else if (playerMove === "Paper") {
-    if (computerMove === "Rock") {
+  } else if (playerMove === "paper") {
+    if (computerMove === "rock") {
       result = "You Win.";
-    } else if (computerMove === "Paper") {
+    } else if (computerMove === "paper") {
       result = "Tie.";
-    } else if (computerMove === "Scissors") {
+    } else if (computerMove === "scissors") {
       result = "You lose.";
     }
-  } else if (playerMove === "Rock") {
-    if (computerMove === "Rock") {
+  } else if (playerMove === "rock") {
+    if (computerMove === "rock") {
       result = "Tie.";
-    } else if (computerMove === "Paper") {
+    } else if (computerMove === "paper") {
       result = "You lose.";
-    } else if (computerMove === "Scissors") {
+    } else if (computerMove === "scissors") {
       result = "You Win.";
     }
   }
@@ -62,7 +62,8 @@ function playGame(playerMove) {
     <img src="./${playerMove}-emoji.png" alt="rock-emoji" class="move-icon" />
     <img
       src="./${computerMove}-emoji.png"
-      alt="scissors-emojis"
+      alt="s
+cissors-emojis"
       class="move-icon"
     />
     Computer`;
@@ -78,11 +79,11 @@ function pickComputerMove() {
   let computerMove = "";
   const randomNumber = Math.random();
   if (randomNumber >= 0 && randomNumber < 1 / 3) {
-    computerMove = "Rock";
+    computerMove = "rock";
   } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
-    computerMove = "Paper";
+    computerMove = "paper";
   } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
-    computerMove = "Scissors";
+    computerMove = "scissors";
   }
 
   return computerMove;
