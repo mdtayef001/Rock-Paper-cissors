@@ -18,7 +18,7 @@ function playGame(playerMove) {
   const computerMove = pickComputerMove();
   let result = "";
 
-  if (playerMove === "cissors") {
+  if (playerMove === "scissors") {
     if (computerMove === "rock") {
       result = "You lose.";
     } else if (computerMove === "paper") {
