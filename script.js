@@ -49,7 +49,7 @@ document.body.addEventListener("keydown", (event) => {
   } else if (event.key === "a") {
     autoPlay();
   } else if (event.key === "Backspace") {
-    resetScore();
+    showResetConfirmation();
   }
 });
 
