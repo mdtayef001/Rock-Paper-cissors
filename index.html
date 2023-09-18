@@ -7,37 +7,48 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <p class="title">Rock Paper Scissors</p>
+    <div class="container">
+      <div>
+        <p class="title">Rock Paper Scissors</p>
+        <button class="move-button js-rock-button">
+          <img class="move-icon" src="./rock-emoji.png" alt="rock-emoji" />
+        </button>
 
-    <button onclick="playGame('rock')" class="move-button">
-      <img class="move-icon" src="./rock-emoji.png" alt="rock-emoji" />
-    </button>
+        <button class="move-button js-paper-button">
+          <img class="move-icon" src="./paper-emoji.png" alt="paper-emoji" />
+        </button>
 
-    <button onclick="playGame('paper')" class="move-button">
-      <img class="move-icon" src="./paper-emoji.png" alt="paper-emoji" />
-    </button>
+        <button class="move-button js-scissors-button">
+          <img
+            class="move-icon"
+            src="./scissors-emoji.png"
+            alt="scissors-emoji"
+          />
+        </button>
 
-    <button onclick="playGame('scissors');" class="move-button">
-      <img class="move-icon" src="./scissors-emoji.png" alt="scissors-emoji" />
-    </button>
+        <p class="js-result result"></p>
+        <p class="js-moves"></p>
+        <p class="js-score score"></p>
 
-    <p class="js-result result"></p>
-    <p class="js-moves"></p>
-    <p class="js-score score"></p>
-
-    <button
-      onclick="
-    score.wins = 0;
-    score.losses = 0;
-    score.ties = 0;
-    localStorage.removeItem('score');
-    updateScoreElement();
-    "
-      class="rest-score-button"
-    >
-      Reset Score
-    </button>
-
+        <button class="rest-score-button js-rest-score-button">
+          Reset Score
+        </button>
+        <button class="auto-play-button js-auto-play-button">Auto Play</button>
+        <p class="js-reset-confirmation"></p>
+      </div>
+      <div class="side__note">
+        <pre>
+        You Can also Use Keybord to play the game {
+          "r" = rock;
+          "p" = paper;
+          "s" = scissors;
+          "a" = auto play and stop auto play;
+          "backspace" = reset score;
+        }
+      </pre
+        >
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
